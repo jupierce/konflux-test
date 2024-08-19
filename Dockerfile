@@ -5,8 +5,8 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 WORKDIR /bin
-RUN wget "http://stedolan.github.io/jq/download/linux64/jq" && chmod 755 jq
+RUN wget "https://github.com/jqlang/jq/releases/download/jq-1.7.1/jq-linux-amd64" && chmod 755 jq-linux-amd64
   
 WORKDIR /data
 
-CMD ["/bin/jq"]
+CMD ["/bin/jq-linux-amd64"]
